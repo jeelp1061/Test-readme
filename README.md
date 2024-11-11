@@ -112,3 +112,88 @@ docker rm your-container-name
 ---
 
 That's it! You now have a full guide for setting up, building, and running your Docker container for **Alian hub**.
+
+
+---
+
+# Docker Container and Image Management
+
+After building your Docker image and running your container, you might want to **stop** and **remove** them. Below are the steps to do so.
+
+## 1. **Stop and Remove the Running Docker Container**
+
+To stop a running container, use the following command:
+
+```bash
+docker stop <container_name_or_id>
+```
+
+For example:
+```bash
+docker stop my-app-container
+```
+
+Once the container is stopped, you can remove it using the command:
+
+```bash
+docker rm <container_name_or_id>
+```
+
+For example:
+```bash
+docker rm my-app-container
+```
+
+If you want to **stop and remove** the container in one command, you can do:
+
+```bash
+docker rm -f <container_name_or_id>
+```
+
+### 2. **Remove the Docker Image**
+
+To remove a Docker image after it has been built, use the following command:
+
+```bash
+docker rmi <image_name_or_id>
+```
+
+For example:
+```bash
+docker rmi my-app-image
+```
+
+If you have multiple tags or versions of an image, you might want to remove them all. You can use the `-f` (force) flag to force the removal of the image even if there are existing containers associated with it.
+
+```bash
+docker rmi -f <image_name_or_id>
+```
+
+### 3. **List All Containers and Images**
+
+To check which containers and images are currently available on your system, use the following commands:
+
+- **List all containers (including stopped ones):**
+  ```bash
+  docker ps -a
+  ```
+
+- **List all images:**
+  ```bash
+  docker images
+  ```
+
+### Example
+
+1. Stop and remove the container:
+   ```bash
+   docker stop my-app-container
+   docker rm my-app-container
+   ```
+
+2. Remove the Docker image:
+   ```bash
+   docker rmi my-app-image
+   ```
+
+---
