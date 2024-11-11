@@ -11,11 +11,13 @@ This document provides all the steps required to set up, build, and run a Docker
 
 ### 1. Configure Environment Variables
 
-If you have already setup then you can skip this step.
+> **Note**: If you have already configured the environment variables and set up the necessary files, you can skip this step.
 
-## Environment Variables Setup
+#### Environment Variables Setup
 
 To manage environment variables, follow the steps below to create and configure `.env` files in the necessary directories. Each part of the application (root, admin, and frontend) requires a separate `.env` file to store its specific environment variables.
+
+> **Note**: Before this Please check .env.example file in root directory.
 
 ## Steps
 
@@ -35,7 +37,7 @@ To manage environment variables, follow the steps below to create and configure 
 
 3. **Frontend Directory**
    - Inside the frontend directory, create an .env file (/frontend/.env).
-   - Use this file to specify environment variables needed by the admin portal.
+   - Use this file to specify environment variables needed by the frontend portal.
 
 ### 3. Build the Docker Image
 
@@ -110,6 +112,7 @@ To check the status of the running containers:
 ```bash
 docker-compose ps
 ```
+---
 
 ## Summary of Commands
 
@@ -131,6 +134,12 @@ docker logs your-container-name
 # Stop and remove container
 docker stop your-container-name
 docker rm your-container-name
+
+# Docker with Docker Compose file
+docker-compose up --build -d
+docker-compose build
+docker-compose down
+docker-compose ps
 ```
 
 ---
@@ -218,5 +227,9 @@ To check which containers and images are currently available on your system, use
    ```bash
    docker rmi my-app-image
    ```
-
 ---
+
+## Resources
+https://docs.docker.com/reference/cli/docker/
+https://docs.docker.com/reference/cli/docker/compose/
+
