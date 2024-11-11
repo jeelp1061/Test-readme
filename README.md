@@ -61,7 +61,6 @@ This command will:
 
 - Run the container in detached mode (`-d`)
 - Map port 4000 of the container to port 4000 on the host (`-p 4000:4000`)
-- Load environment variables from the `.env` file
 - Name the container as specified in `your-container-name`
 
 Replace `your-container-name` and `your-image-name` with your preferred container and image names, respectively.
