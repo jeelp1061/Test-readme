@@ -234,3 +234,7 @@ https://docs.docker.com/reference/cli/docker/
 
 https://docs.docker.com/reference/cli/docker/compose/
 
+https://www.geeksforgeeks.org/docker-instruction-commands/
+
+https://docs.docker.com/get-started/docker_cheatsheet.pdf
+
