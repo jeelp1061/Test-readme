@@ -59,7 +59,7 @@ docker push your-private-registry-url/your-image-name:v1
 ```
 
 ---
-
+> **Note**: Make sure port is 4000.
 That's it! You now have a complete guide for pushing a Docker image to any image registry. You can now use this image and deploy it.
 
 ---
@@ -129,3 +129,9 @@ docker rm your-container-name
 docker rmi your-image-name:v1
 ```
 ---
+
+### Resources
+https://docs.digitalocean.com/products/app-platform/how-to/deploy-from-container-images/
+https://devcenter.heroku.com/articles/container-registry-and-runtime
+https://docs.render.com/deploy-an-image
+
