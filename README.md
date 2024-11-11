@@ -13,7 +13,7 @@ This document provides all the steps required to set up, build, and run a Docker
 
 If you have already setup then you can skip this step.
 
-# Environment Variables Setup
+## Environment Variables Setup
 
 To manage environment variables, follow the steps below to create and configure `.env` files in the necessary directories. Each part of the application (root, admin, and frontend) requires a separate `.env` file to store its specific environment variables.
 
@@ -85,6 +85,13 @@ When you're done, stop and remove the container:
 ```bash
 docker stop your-container-name
 docker rm your-container-name
+```
+
+### Docker with composer file
+You can change container and image name in docker-compose.yml file.
+
+```bash
+docker-compose up --build -d
 ```
 
 ## Summary of Commands
