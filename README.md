@@ -13,9 +13,29 @@ This document provides all the steps required to set up, build, and run a Docker
 
 If you have already setup then you can skip this step.
 
-To manage environment variables, create a `.env` file in the root, admin and frontend directory of the project. This file will store the required environment variables for the application.
+# Environment Variables Setup
 
-Add your environment variables to this file admin/env, frontend/env and /env.
+To manage environment variables, follow the steps below to create and configure `.env` files in the necessary directories. Each part of the application (root, admin, and frontend) requires a separate `.env` file to store its specific environment variables.
+
+## Steps
+
+1. **Root Directory**  
+   - Create a `.env` file at the root level of the project (`/.env`).
+   - This file will contain environment variables used by the main server.
+
+   Example:
+   ```plaintext
+   # /.env
+   API_URL=localhost
+   PORT=4000
+
+2. **Admin Directory**
+   - Inside the admin directory, create an .env file (/admin/.env).
+   - Use this file to specify environment variables needed by the admin portal.
+
+3. **Frontend Directory**
+   - Inside the frontend directory, create an .env file (/frontend/.env).
+   - Use this file to specify environment variables needed by the admin portal.
 
 ### 3. Build the Docker Image
 
