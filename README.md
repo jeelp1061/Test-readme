@@ -1,7 +1,7 @@
 
-# Project Name - Docker Setup Guide
+# Alian hub - Docker Setup Guide
 
-This document provides all the steps required to set up, build, and run a Docker container for **Project Name**.
+This document provides all the steps required to set up, build, and run a Docker container for **Alian hub**.
 
 ## Prerequisites
 
@@ -9,55 +9,30 @@ This document provides all the steps required to set up, build, and run a Docker
 
 ## Setup Instructions
 
-### 1. Clone the Repository
+### 1. Configure Environment Variables
 
-First, clone the repository to get access to the Dockerfile and project files.
+If you have already setup then you can skip this step.
 
-```bash
-git clone https://github.com/username/repository-name.git
-cd repository-name
-```
+To manage environment variables, create a `.env` file in the root, admin and frontend directory of the project. This file will store the required environment variables for the application.
 
-### 2. Configure Environment Variables
-
-To manage environment variables, create a `.env` file in the root directory of the project. This file will store the required environment variables for the application.
-
-1. Create a file named `.env` in the project root.
-2. Add your environment variables to this file in the following format:
-
-```env
-# .env file example
-ENV_VAR1=value1
-ENV_VAR2=value2
-# Add more variables as needed
-```
-
-Alternatively, if you prefer not to use a `.env` file, you can pass environment variables as `--build-arg` parameters during the Docker build command (not recommended for a large number of variables).
+Add your environment variables to this file admin/env, frontend/env and /env.
 
 ### 3. Build the Docker Image
 
 Run the following command to build the Docker image, loading environment variables from the `.env` file:
 
 ```bash
-docker build --env-file .env -t your-image-name .
+docker build -t your-image-name .
 ```
 
 Replace `your-image-name` with your desired image name.
-
-#### Optional: Build with Arguments (Without `.env` File)
-
-If you prefer to specify environment variables directly, you can use the `--build-arg` option as shown below. This can be useful for quick builds but is less manageable with numerous variables.
-
-```bash
-docker build -t your-image-name --build-arg ENV_VAR1=value1 --build-arg ENV_VAR2=value2 .
-```
 
 ### 4. Run the Docker Container
 
 Once the image is built, you can start the Docker container using the following command:
 
 ```bash
-docker run -d -p 4000:4000 --env-file .env --name your-container-name your-image-name
+docker run -d -p 4000:4000 --name your-container-name your-image-name
 ```
 
 This command will:
@@ -97,15 +72,11 @@ docker rm your-container-name
 Here's a quick summary of the key commands:
 
 ```bash
-# Clone the repository
-git clone https://github.com/username/repository-name.git
-cd repository-name
-
 # Build the Docker image with .env
-docker build --env-file .env -t your-image-name .
+docker build -t your-image-name .
 
 # Run the Docker container
-docker run -d -p 4000:4000 --env-file .env --name your-container-name your-image-name
+docker run -d -p 4000:4000 --name your-container-name your-image-name
 
 # Check running containers
 docker ps
@@ -120,4 +91,4 @@ docker rm your-container-name
 
 ---
 
-That's it! You now have a full guide for setting up, building, and running your Docker container for **Project Name**.
+That's it! You now have a full guide for setting up, building, and running your Docker container for **Alian hub**.
