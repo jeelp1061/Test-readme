@@ -86,18 +86,18 @@ This will:
 
 **3. Update and Rebuild the Docker Image(optional)**
 If you make changes to your application and want to update the image, follow these steps:
-**1. Make changes to your code.**
-```bash
-docker build -t your-image-name .
-```
-**2. Tag the updated image:**
-```bash
-docker tag your-image-name your-dockerhub-username/your-image-name:v2
-```
-**2. Push the updated image:**
-```bash
-docker push your-dockerhub-username/your-image-name:v2
-```
+ * **3.1. Make changes to your code.**
+  ```bash
+  docker build -t your-image-name .
+  ```
+ * **3.2. Tag the updated image:**
+  ```bash
+  docker tag your-image-name your-dockerhub-username/your-image-name:v2
+  ```
+ * **3.3. Push the updated image:**
+  ```bash
+  docker push your-dockerhub-username/your-image-name:v2
+  ```
 ## Summary of Commands
 ```bash
 # Build the Docker image
@@ -128,3 +128,4 @@ docker rm your-container-name
 # Remove a Docker image
 docker rmi your-image-name:v1
 ```
+---
