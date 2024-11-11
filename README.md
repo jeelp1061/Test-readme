@@ -86,12 +86,29 @@ When you're done, stop and remove the container:
 docker stop your-container-name
 docker rm your-container-name
 ```
+---
 
-### Docker with composer file
+## Docker with Docker compose
 You can change container and image name in docker-compose.yml file.
 
+To build image and run container:
 ```bash
 docker-compose up --build -d
+```
+
+To stop the containers:
+```bash
+docker-compose down
+```
+
+To rebuild the image:
+```bash
+docker-compose build
+```
+
+To check the status of the running containers:
+```bash
+docker-compose ps
 ```
 
 ## Summary of Commands
@@ -119,7 +136,6 @@ docker rm your-container-name
 ---
 
 That's it! You now have a full guide for setting up, building, and running your Docker container for **Alian hub**.
-
 
 ---
 
