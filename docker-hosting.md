@@ -63,8 +63,6 @@ docker push your-private-registry-url/your-image-name:v1
 That's it! You now have a complete guide for pushing a Docker image to any image registry. You can now use this image and deploy it.
 
 ---
----
-
 
 ## For checking the Docker image locally
 **1. Pull the Docker Image from Docker Hub**
