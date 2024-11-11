@@ -231,5 +231,6 @@ To check which containers and images are currently available on your system, use
 
 ## Resources
 https://docs.docker.com/reference/cli/docker/
+
 https://docs.docker.com/reference/cli/docker/compose/
 
